@@ -1,85 +1,53 @@
 <div align="center">
   <h1>🛡️ SecureLang</h1>
-  <p><strong>An enterprise-grade, security-focused programming language and ecosystem.</strong></p>
-
-  [![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)](#)
-  [![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)](#)
-  [![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](#)
-  [![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](#)
+  <p><strong>The Ultimate Security-Focused Programming Environment.</strong></p>
 </div>
 
 ---
 
-## 📖 Overview
+## 📖 What is SecureLang?
 
-**SecureLang** is a modern programming language designed from the ground up for enterprise applications where security, memory safety, and performance are paramount. 
+**SecureLang** is an enterprise-grade programming language and ecosystem built specifically for security professionals and developers who demand memory safety, strict execution controls, and unbreakable code. 
 
-This repository contains the entire SecureLang ecosystem, including the core compiler engine, web-based playground, backend services, and a dedicated VS Code extension.
+You can safely use SecureLang to write, analyze, and deploy highly secure applications.
 
-## 🏗️ Architecture & Ecosystem
+## 🚀 How to Use SecureLang
 
-The project is structured as a monorepo containing several interconnected systems:
+This repository provides the public tools you need to write and run SecureLang code.
 
-- **`securelang-engine/` (Rust)**: The core compiler and runtime. Features a custom lexer, parser, bytecode generator, optimizer, and virtual machine.
-- **`backend/` (Node.js, Express, TypeScript)**: API services handling authentication, user management, and code execution endpoints, powered by PostgreSQL & Prisma.
-- **`frontend/` (React, Vite, TailwindCSS)**: A beautiful, responsive web application for interacting with SecureLang, writing code, and viewing execution results.
-- **`vscode-extension/` (TypeScript)**: A Visual Studio Code extension providing syntax highlighting and language server integration.
-- **`docs/`**: Comprehensive architecture and language guidelines.
+### 1. Install the VS Code Extension
+For the best writing experience, install the official SecureLang VS Code extension.
+1. Open Visual Studio Code.
+2. Go to the Extensions panel (`Ctrl+Shift+X` or `Cmd+Shift+X`).
+3. Search for **SecureLang** and click **Install**.
+*(Note: If you have the `.vsix` file from our releases, you can install it manually by dragging it into the extensions panel).*
 
-## 🚀 Getting Started
+### 2. Download the Compiler CLI
+To run your SecureLang code, you need the engine:
+1. Head to the **Releases** tab on this GitHub repository.
+2. Download the latest `securelang-cli` executable for your operating system (Windows, macOS, or Linux).
+3. Add the executable to your system's `PATH`.
 
-Follow these steps to set up the full ecosystem locally.
+### 3. Run Your First Secure File
+Create a new file called `main.sl` and write your SecureLang code:
 
-### Prerequisites
-- [Docker](https://www.docker.com/) & Docker Compose (for PostgreSQL)
-- [Node.js](https://nodejs.org/) (v20+)
-- [Rust](https://rustup.rs/) (Stable toolchain)
-
-### 1. Database Setup
-Start the PostgreSQL database using Docker Compose:
-```bash
-docker-compose up -d
+```securelang
+fn main() {
+    print("Executing secure environment...");
+}
 ```
 
-### 2. Backend Services
-Navigate to the backend and set up the environment:
+Then, compile and run it securely from your terminal:
 ```bash
-cd backend
-npm install
-npx prisma generate
-npm run dev
+securelang-cli run main.sl
 ```
 
-### 3. Web Frontend
-In a new terminal, spin up the React application:
-```bash
-cd frontend
-npm install
-npm run dev
-```
+## ⚖️ License and Usage Restrictions
 
-### 4. Compiler Engine (Rust)
-To build and test the core compiler:
-```bash
-cd securelang-engine
-cargo build
-cargo test
-```
-*(To run the CLI: `cargo run -p cli`)*
+SecureLang is provided exclusively for your personal and internal business security purposes. 
 
-### 5. VS Code Extension
-To test the syntax highlighting extension in VS Code:
-```bash
-cd vscode-extension
-npm install
-```
-Then, open the `vscode-extension` folder in VS Code and press `F5` to start a new debugging window with the extension loaded.
+**Important Restrictions:**
+- You **may use** this software to secure and run your projects.
+- You **may NOT** extract, modify, redesign, decompile, or redistribute the source code or any part of this project.
 
-## 🛡️ Language Features (WIP)
-- Memory-safe execution environment
-- Strict static typing with inference
-- First-class concurrency primitives
-- Built-in bounds checking and overflow protection
-
-## 📜 License
-This project is licensed under the standard open-source license. See the [LICENSE](./LICENSE) file for details.
+For the full legal terms, please read the [LICENSE](./LICENSE) file carefully before using the software. By using SecureLang, you agree to those terms.
