@@ -1,0 +1,8 @@
+[workspace]
+
+members = [
+    "compiler",
+    "runtime",
+    "sdk",
+    "cli"
+]

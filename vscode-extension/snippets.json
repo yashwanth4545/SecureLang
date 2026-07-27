@@ -1,0 +1,31 @@
+{
+    "SecureLang User Login Block": {
+        "prefix": "userlogin",
+        "body": [
+            "user login {",
+            "    username input",
+            "    password secure",
+            "    authenticate",
+            "}"
+        ],
+        "description": "Scaffold a SecureLang user authentication block"
+    },
+    "SecureLang Function": {
+        "prefix": "fn",
+        "body": [
+            "fn ${1:name}(${2:params}) -> ${3:Type} {",
+            "    $0",
+            "}"
+        ],
+        "description": "Create a SecureLang function"
+    },
+    "SecureLang Class": {
+        "prefix": "class",
+        "body": [
+            "class ${1:Name} {",
+            "    $0",
+            "}"
+        ],
+        "description": "Create a SecureLang class definition"
+    }
+}

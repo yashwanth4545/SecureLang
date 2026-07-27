@@ -1,0 +1,30 @@
+name: securelang
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: securelang-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: securelang_user
+      POSTGRES_PASSWORD: securelang_password
+      POSTGRES_DB: securelang_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: securelang-pgadmin
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@securelang.dev
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:

@@ -1,0 +1,41 @@
+{
+  "name": "securelang",
+  "displayName": "SecureLang",
+  "description": "SecureLang Support",
+  "version": "0.0.1",
+  "publisher": "SecureLang",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "securelang",
+        "aliases": [
+          "SecureLang",
+          "securelang"
+        ],
+        "extensions": [
+          ".sec"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "securelang",
+        "scopeName": "source.securelang",
+        "path": "./syntaxes/securelang.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "securelang",
+        "path": "./snippets.json"
+      }
+    ]
+  }
+}
